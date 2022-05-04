@@ -1,0 +1,53 @@
+struct node {
+    T _val;    // valor
+    nat _alt;    // altura
+    
+    node* _esq;  // subarbol izquierdo
+    node* _dret; // subarbol derecho
+   
+    node* _lider;
+};
+
+nat _max;  // Valor maximo de nodos en un arbol
+nat _size; // nº de grupos del arbol
+nat _elem; // nº de nodos del arbol
+
+node *_arrel; // Raiz
+
+//copia todo el arbol en funcion del nodo raiz.
+node *copia_tot(node *src); 
+
+//funcion auxiliar de añadir nodos con su valor.
+node *afegir_aux(node *act, const T &x);
+
+//rotacion izquierda del arbol
+node *left_rotation(node *n);
+
+//rotacion derecha del arbol
+node *right_rotation(node *n);
+
+//maximo entre 2 valores 
+nat max(nat a, nat b);
+
+//equilibra el arbol.
+int equilibra(node *n);
+
+//retorna la altura del arbol.
+nat high(node *n) const;
+
+//Consulta si un nodo se encuentra en particio
+node* consulta(node *n, const T &k) const;
+
+//Buscar el representante de un nodo
+node* find(node *n)const;
+
+
+/*
+
+Para poder realizar esta clase, se debía implementar un tipo de todos los diccionarios dados en la asignatura: BST, TST, TST trie, Hash, AVL.
+Nosotros nos hemos decantado por el AVL, porque en cuanto a la mayoría de las operaciones BST (p. ej., búsqueda, máx, min, insertar, suprimir, etc.) toman el tiempo O(h) donde h es la altura del BST. El coste de estas operaciones puede llegar a ser O(n) para un árbol binario decantado. Sin embargo, con la AVL, si nos aseguramos que la altura del árbol se mantiene O(Log n), es decir, que después de cada inserción y supresión lo mantenemos equilibrado, se puede garantizar un límite superior de O(Logn) para todas estas operaciones. La altura de un árbol AVL es siempre O(Log n) donde n es el número de nodos del árbol, por tanto es más eficiente.
+
+Para hacer los métodos unir y mateix_grup, hemos implementado la estrategia Quick-union con la técnica de unión por rango, así la partición con menor altura se pone como hija a la que tiene mayor altura.
+Nos decidimos por ésta técnica porque se necesita saber la altura de la partición, y es un factor que aprovechamos, ya que lo utilizamos para poder equilibrar la partición cada vez que se añade un nodo.
+
+*/

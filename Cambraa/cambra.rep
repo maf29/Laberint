@@ -1,0 +1,19 @@
+//private
+
+bool _camara[4];		//array cada posicion es una puerta --> hay una puerta por pared(4) 
+unsigned int _cont_portes;		// contador que cuenta las puestas abiertas
+//ponerlo en NAT?????????????????????????
+
+/*
+Cada cambra esta compuesta por 4 paredes :			norte
+							oeste		este
+								sur
+									
+	Hemos pensado que una forma de guardar la cambra seria en un vector, 
+	en el que cada posicion del vector seria una pared, pero es una opción ineficiente.
+	
+	Entonces como alternativa, como nos interesa saber el estado de las puertas, 
+	hemos creado un array de booleanos los cuales comprueban el estado de las puertas, 
+	asumiendo que las paredes existen.
+	Entonces, el orden de almacenamiento en el array booleano seria :		|norte|este|sur|oeste| 					
+*/

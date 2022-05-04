@@ -1,0 +1,2 @@
+Al ahcer un ./program.exe < jp_public_cambra.in | diff - jp_public_cambra.res
+saltan errores con la primera constructora al pasar dos posiciones, ej : N O en el norte se pasa un false y el oeste un true, es culpa del driver que lo pasa mal?

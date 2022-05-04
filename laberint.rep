@@ -1,0 +1,9 @@
+
+posicio _pos;
+
+cambra **_lab;	//se declarar doble puntero para poder crear una matriz mediante puneros 
+
+
+/*
+En cuanto a la parte privada de la clase Laberinto, estuvimos pensando sobre qué tipo de estructura podíamos utilizar y en lugar de aplicar una matriz de arrays, nos hemos decantado por la memoria dinámica y hemos decidido implementar una matriz de punteros, la cual en cada posición se almacena una cámara. Para saber el número de filas y columnas también declaramos una posición (_pos), la cual _pos.first tiene el número de filas y _pos.second el número de columnas, así nos será más fácil poder acceder a las posiciones de la matriz y poder tratarla.
+*/

@@ -1,0 +1,59 @@
+##!------------------------------------------------------------------
+##! JOC DE PROVES DE DEDALUS
+##!------------------------------------------------------------------
+##!
+##!
+##!------------------------------------------------------------------
+##1 Inicialitzacions
+##!------------------------------------------------------------------
+##!
+init l3x1 laberint 3 1
+init l2x2 laberint 2 2
+init l4x4 laberint 4 4
+init l3x11 laberint 3 11
+init l25x10 laberint 10 25
+init l5x5 laberint 5 5
+##!
+##!
+##!------------------------------------------------------------------
+##2 Construccio de laberints
+##!------------------------------------------------------------------
+##!
+l3x1 construir
+#dedalus::construir OK
+l3x1 comprova_perfecte
+#true
+l3x1 print
+#3 1
+#***
+#* *
+#* *
+#* *
+#* *
+#* *
+#***
+l3x1 construir
+##!
+l3x11 print
+l3x11 construir
+l3x11 print
+#true
+l2x2 print
+l2x2 construir
+l2x2 print
+#true
+l4x4 print
+l4x4 construir
+l4x4 print
+#true
+l5x5 print
+l5x5 construir
+#dedalus::construir OK
+#l5x5 comprova_perfecte
+l5x5 print
+#true
+l25x10 print
+l25x10 construir
+l25x10 print
+#true
+##!

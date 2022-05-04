@@ -1,0 +1,14 @@
+bool _camara[4];			//array cada posicion es una puerta --> hay una puerta por pared(4) 
+unsigned int _cont_portes;		// contador que cuenta las puestas abiertas
+
+/*
+Para poder distinguir las diferentes puertas de cada cámara, primero pensamos en guardar la información de las puertas de una cámara con un array, el cual en cada posición se guardaría una pared, sin embargo nos dimos cuenta de que era una opción ineficiente.
+Entonces, como alternativa se nos ocurrió que realmente lo que nos interesaba saber era el estado de las puertas y no de toda una pared, así que decidimos crear un array de booleanos, el cual cada posición guarda si la puerta esta abierta (true) o no (false).
+
+El orden de cada posición del array es el siguiente:
+
+         _camara[0] = NORD
+         _cámara[1] = EST
+         _cámara[2] = SUR
+         _cámara[3] = OEST					
+*/
